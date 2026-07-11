@@ -178,12 +178,7 @@ const sr = ScrollReveal({
   reset: true,
 });
 
-sr.reveal(`.nav__menu`, {
-  delay: 100,
-  scale: 0.1,
-  origin: "bottom",
-  distance: "300px",
-});
+
 
 sr.reveal(`.home__data`);
 sr.reveal(`.home__handle`, {
@@ -256,4 +251,31 @@ sr.reveal(`.footer, footer__container`, {
   scale: 0.9,
   origin: "bottom",
   distance: "30px",
+});
+
+/*=============== CUSTOM CURSOR ===============*/
+const cursor = document.querySelector('.custom-cursor');
+
+document.addEventListener('mousemove', (e) => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+});
+
+document.addEventListener('mousedown', () => {
+  cursor.style.transform = 'translate(-50%, -50%) scale(0.8)';
+});
+
+document.addEventListener('mouseup', () => {
+  cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+});
+
+// Add hover effect for links and buttons
+const hoverElements = document.querySelectorAll('a, button, .services__card, .work__card, .skills__content');
+hoverElements.forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    cursor.classList.add('hover');
+  });
+  el.addEventListener('mouseleave', () => {
+    cursor.classList.remove('hover');
+  });
 });

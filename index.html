@@ -30,6 +30,7 @@
 </head>
 
 <body>
+    <div class="custom-cursor"></div>
     <!--=============== HEADER ===============-->
     <header class="header" id="header">
         <nav class="nav container">
@@ -37,33 +38,33 @@
 
             <div class="nav__menu">
                 <ul class="nav__list">
-                    <li class="nav__item ">
-                        <a href="#home" class="nav__link">
-                            <i class='bx bx-home'></i>
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class='bx bx-home'></i> <span class="nav__name">Home</span>
                         </a>
                     </li>
 
-                    <li class="nav__item ">
+                    <li class="nav__item">
                         <a href="#about" class="nav__link">
-                            <i class='bx bx-user'></i>
+                            <i class='bx bx-user'></i> <span class="nav__name">About</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
                         <a href="#skills" class="nav__link">
-                            <i class='bx bx-book'></i>
+                            <i class='bx bx-book'></i> <span class="nav__name">Skills</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
                         <a href="#work" class="nav__link">
-                            <i class='bx bx-briefcase-alt-2'></i>
+                            <i class='bx bx-briefcase-alt-2'></i> <span class="nav__name">Work</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
                         <a href="#contact" class="nav__link">
-                            <i class='bx bx-message-square-dots'></i>
+                            <i class='bx bx-message-square-dots'></i> <span class="nav__name">Contact</span>
                         </a>
                     </li>
                 </ul>
@@ -121,43 +122,29 @@
 
                         <a href="#about" class="button">About</a>
                     </div>
+                    
+                    <div class="home__social">
+                        <a href="https://www.linkedin.com/in/muneer-hasan-0a43a8202/"
+                            target="_blank" class="home__social-link">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                        <a href="https://github.com/muneerhassan55" target="_blank" class="home__social-link">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                        <a href="https://www.instagram.com/muneerhassanmh/" target="_blank"
+                            class="home__social-link">
+                            <i class='bx bxl-instagram'></i>
+                        </a>
+                        <a href="https://www.facebook.com/muneer.hasan.7334" target="_blank"
+                            class="home__social-link">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+                        <a href="https://wa.me/923449005529" target="_blank" class="home__social-link">
+                            <i class='bx bxl-whatsapp'></i>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="home__handle">
-                    <img src="assets/img/mun_bg.png" alt="" class="home__img">
-                </div>
-
-                <div class="home__social">
-                    <a href="https://www.linkedin.com/in/muneer-hasan-0a43a8202/"
-                        target="_blank" class="home__social-link">
-                        <i class='bx bxl-linkedin'></i>
-                    </a>
-                    <a href="https://github.com/muneerhassan55" target="_blank" class="home__social-link">
-                        <i class='bx bxl-github'></i>
-                    </a>
-                    <a href="https://www.instagram.com/muneerhassanmh/" target="_blank"
-                        class="home__social-link">
-                        <i class='bx bxl-instagram'></i>
-                    </a>
-                    <a href="https://www.facebook.com/muneer.hasan.7334" target="_blank"
-                        class="home__social-link">
-                        <i class='bx bxl-facebook'></i>
-                    </a>
-                 <a href="https://wa.me/923449005529" target="_blank" class="home__social-link">
-        <i class='bx bxl-whatsapp'></i>
-    </a>
-                    <!-- <a href="https://www.fiverr.com/users/muneer4321/manage_gigs" target="_blank" class="home__social-link">
-        <i class='bx bxs-briefcase'></i> 
-    </a>
-    <a href="https://www.upwork.com/freelancers/~0192f2e0b17ffe2e45" target="_blank" class="home__social-link">
-        <i class='bx bxs-user'></i> 
-    </a>  -->
-                </div>
-
-                <a href="#about" class="home__scroll">
-                    <i class='bx bx-mouse home__scroll-icon'></i>
-                    <span class="home__scroll-name">Scroll Down</span>
-                </a>
             </div>
         </section>
 
@@ -934,9 +921,45 @@
                         View More <i class='bx bx-right-arrow work__icon'></i>
                     </span>
                 </div>
+
+                <!--=============== SwiftGo AI ===============-->
+                <div class="work__card mix mobile">
+                    <img src="assets/img/swiftgo.png" alt="" class="work__img">
+                    <h3 class="work__title">SwiftGo AI</h3>
+                    <span class="work__button">
+                        View More <i class='bx bx-right-arrow work__icon'></i>
+                    </span>
+                </div>
+
+                <!--=============== SwiftWire ===============-->
+                <div class="work__card mix mobile">
+                    <img src="assets/img/swiftwire.png" alt="" class="work__img">
+                    <h3 class="work__title">SwiftWire</h3>
+                    <span class="work__button">
+                        View More <i class='bx bx-right-arrow work__icon'></i>
+                    </span>
+                </div>
+
+                <!--=============== RiseRich ===============-->
+                <div class="work__card mix mobile">
+                    <img src="assets/img/riserich.jpg" alt="" class="work__img">
+                    <h3 class="work__title">RiseRich</h3>
+                    <span class="work__button">
+                        View More <i class='bx bx-right-arrow work__icon'></i>
+                    </span>
+                </div>
+
+                <!--=============== Level Plus ===============-->
+                <div class="work__card mix mobile">
+                    <img src="assets/img/levelplus.png" alt="" class="work__img">
+                    <h3 class="work__title">Level Plus</h3>
+                    <span class="work__button">
+                        View More <i class='bx bx-right-arrow work__icon'></i>
+                    </span>
+                </div>
                 <!--=============== Marrow Master ===============-->
                 <div class="work__card mix mobile">
-                    <img src="assets/img/marrow.png" alt="" class="work__img">
+                    <img src="assets/img/marrow_master.jpg" alt="" class="work__img">
                     <h3 class="work__title">Marrow Master</h3>
                     <span class="work__button">
                         View More <i class='bx bx-right-arrow work__icon'></i>
@@ -945,7 +968,7 @@
 
                 <!--=============== Gesture Detector ===============-->
                 <div class="work__card mix mobile">
-                    <img src="assets/img/gesture detector.png" alt="" class="work__img">
+                    <img src="assets/img/gesture_detector.jpg" alt="" class="work__img">
                     <h3 class="work__title">Gesture Detector</h3>
                     <span class="work__button">
                         View More <i class='bx bx-right-arrow work__icon'></i>
@@ -954,7 +977,7 @@
 
                 <!--=============== Ortheristis===============-->
                 <div class="work__card mix mobile">
-                    <img src="assets/img/ortho.png" alt="" class="work__img">
+                    <img src="assets/img/osteodetect.jpg" alt="" class="work__img">
                     <h3 class="work__title">OsteoDetect</h3>
                     <span class="work__button">
                         View More <i class='bx bx-right-arrow work__icon'></i>
@@ -963,7 +986,7 @@
 
                 <!--=============== Safe Guard ===============-->
                 <div class="work__card mix mobile">
-                    <img src="assets/img/safeguard.jpeg" alt="" class="work__img">
+                    <img src="assets/img/safe_guard.jpg" alt="" class="work__img">
                     <h3 class="work__title">Safe Guard</h3>
                     <span class="work__button">
                         View More <i class='bx bx-right-arrow work__icon'></i>
@@ -973,7 +996,7 @@
 
                 <!--=============== Uniyo Ltd ===============-->
                 <div class="work__card mix mobile ">
-                    <img src="assets/img/uniyo.png" alt="" class="work__img">
+                    <img src="assets/img/uniyo.jpg" alt="" class="work__img">
                     <h3 class="work__title">Uniyo</h3>
                     <span class="work__button">
                         View More <i class='bx bx-right-arrow work__icon'></i>
@@ -982,7 +1005,7 @@
 
                 <!--=============== Aaaladen Ltd ===============-->
                 <div class="work__card mix mobile ">
-                    <img src="assets/img/work4.png" alt="" class="work__img">
+                    <img src="assets/img/aaaladen.jpg" alt="" class="work__img">
                     <h3 class="work__title">Aaaladen</h3>
                     <span class="work__button">
                         View More <i class='bx bx-right-arrow work__icon'></i>
@@ -991,7 +1014,7 @@
 
                 <!--=============== Viharam ===============-->
                 <div class="work__card mix mobile ">
-                    <img src="assets/img/work1.png" alt="" class="work__img">
+                    <img src="assets/img/viharam.jpg" alt="" class="work__img">
                     <h3 class="work__title">Viharam</h3>
                     <span class="work__button">
                         View More <i class='bx bx-right-arrow work__icon'></i>
@@ -1000,7 +1023,7 @@
 
                 <!--===============Complaint Application ===============-->
                 <div class="work__card mix mobile">
-                    <img src="assets/img/work2.png" alt="" class="work__img">
+                    <img src="assets/img/complaint_app.jpg" alt="" class="work__img">
                     <h3 class="work__title">Complaint App</h3>
                     <span class="work__button">
                         View More <i class='bx bx-right-arrow work__icon'></i>
@@ -1010,7 +1033,7 @@
 
                 <!--=============== Gulbahar Tailor App ===============-->
                 <div class="work__card mix mobile ">
-                    <img src="assets/img/gul.jpeg" alt="" class="work__img">
+                    <img src="assets/img/gulbahar_tailor.jpg" alt="" class="work__img">
                     <h3 class="work__title">Gulbahar Tailor</h3>
                     <span class="work__button">
                         View More <i class='bx bx-right-arrow work__icon'></i>
@@ -1019,7 +1042,7 @@
 
                 <!--=============== car wash App ===============-->
                 <div class="work__card mix mobile ">
-                    <img src="assets/img/work5.png" alt="" class="work__img">
+                    <img src="assets/img/car_wash_app.jpg" alt="" class="work__img">
                     <h3 class="work__title">Car Wash App</h3>
                     <span class="work__button">
                         View More <i class='bx bx-right-arrow work__icon'></i>
@@ -1028,8 +1051,56 @@
 
                 <!--=============== Entertainment App ===============-->
                 <div class="work__card mix mobile">
-                    <img src="assets/img/work3.png" alt="" class="work__img">
+                    <img src="assets/img/entertainment_app.jpg" alt="" class="work__img">
                     <h3 class="work__title">Entertainment App</h3>
+                    <span class="work__button">
+                        View More <i class='bx bx-right-arrow work__icon'></i>
+                    </span>
+                </div>
+
+
+
+                <!--=============== Fluzar ===============-->
+                <div class="work__card mix mobile">
+                    <img src="assets/img/fluzar.jpg" alt="" class="work__img">
+                    <h3 class="work__title">Fluzar</h3>
+                    <span class="work__button">
+                        View More <i class='bx bx-right-arrow work__icon'></i>
+                    </span>
+                </div>
+
+
+                <!--=============== Universal LMS ===============-->
+                <div class="work__card mix mobile">
+                    <img src="assets/img/universal_lms.jpg" alt="" class="work__img">
+                    <h3 class="work__title">Universal LMS</h3>
+                    <span class="work__button">
+                        View More <i class='bx bx-right-arrow work__icon'></i>
+                    </span>
+                </div>
+
+                <!--=============== Modern Islamic School LMS ===============-->
+                <div class="work__card mix mobile">
+                    <img src="assets/img/modern_islamic.jpg" alt="" class="work__img">
+                    <h3 class="work__title">Modern Islamic School LMS</h3>
+                    <span class="work__button">
+                        View More <i class='bx bx-right-arrow work__icon'></i>
+                    </span>
+                </div>
+
+                <!--=============== Faith School System LMS ===============-->
+                <div class="work__card mix mobile">
+                    <img src="assets/img/faith_school.jpg" alt="" class="work__img">
+                    <h3 class="work__title">Faith School System LMS</h3>
+                    <span class="work__button">
+                        View More <i class='bx bx-right-arrow work__icon'></i>
+                    </span>
+                </div>
+
+                <!--=============== The Caps School LMS ===============-->
+                <div class="work__card mix mobile">
+                    <img src="assets/img/caps_school.jpg" alt="" class="work__img">
+                    <h3 class="work__title">The Caps School LMS</h3>
                     <span class="work__button">
                         View More <i class='bx bx-right-arrow work__icon'></i>
                     </span>
@@ -1058,9 +1129,14 @@
                             <p class="work__modal-info">Admin dashboard for user and business management</p>
                         </li>
                     </ul>
-                    <a href="https://play.google.com/store/apps/details?id=com.tuttin.tuttin_rete" target="_blank" class="button work__modal-button">
-                        View on Play Store <i class='bx bxl-play-store work__modal-icon'></i>
-                    </a>
+                    <div style="display: flex; gap: 10px; justify-content: center;">
+                        <a href="https://play.google.com/store/apps/details?id=com.tuttin.tuttin_rete" target="_blank" class="button work__modal-button" style="font-size: 12px; padding: 0.5rem;">
+                            Play Store <i class='bx bxl-play-store work__modal-icon'></i>
+                        </a>
+                        <a href="https://apps.apple.com/it/app/tuttinrete/id6748835004" target="_blank" class="button work__modal-button" style="font-size: 12px; padding: 0.5rem;">
+                            App Store <i class='bx bxl-apple work__modal-icon'></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -1082,9 +1158,14 @@
                             <p class="work__modal-info">Interactive learning tools and resource sharing</p>
                         </li>
                     </ul>
-                    <a href="https://play.google.com/store/apps/details?id=com.release.thetuitionist" target="_blank" class="button work__modal-button">
-                        View on Play Store <i class='bx bxl-play-store work__modal-icon'></i>
-                    </a>
+                    <div style="display: flex; gap: 10px; justify-content: center;">
+                        <a href="https://play.google.com/store/apps/details?id=com.release.thetuitionist" target="_blank" class="button work__modal-button" style="font-size: 12px; padding: 0.5rem;">
+                            Play Store <i class='bx bxl-play-store work__modal-icon'></i>
+                        </a>
+                        <a href="https://apps.apple.com/us/app/the-tuitionist/id6759322713" target="_blank" class="button work__modal-button" style="font-size: 12px; padding: 0.5rem;">
+                            App Store <i class='bx bxl-apple work__modal-icon'></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -1106,9 +1187,14 @@
                             <p class="work__modal-info">Video course content and learning materials</p>
                         </li>
                     </ul>
-                    <a href="https://play.google.com/store/apps/details?id=com.jazb.thetuitionist" target="_blank" class="button work__modal-button">
-                        View on Play Store <i class='bx bxl-play-store work__modal-icon'></i>
-                    </a>
+                    <div style="display: flex; gap: 10px; justify-content: center;">
+                        <a href="https://play.google.com/store/apps/details?id=com.jazb.thetuitionist" target="_blank" class="button work__modal-button" style="font-size: 12px; padding: 0.5rem;">
+                            Play Store <i class='bx bxl-play-store work__modal-icon'></i>
+                        </a>
+                        <a href="https://apps.apple.com/us/app/jazb/id6748350679" target="_blank" class="button work__modal-button" style="font-size: 12px; padding: 0.5rem;">
+                            App Store <i class='bx bxl-apple work__modal-icon'></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -1130,9 +1216,14 @@
                             <p class="work__modal-info">Product catalog and inquiry system</p>
                         </li>
                     </ul>
-                    <a href="https://play.google.com/store/apps/details?id=com.ShopChat.Shop_Chat" target="_blank" class="button work__modal-button">
-                        View on Play Store <i class='bx bxl-play-store work__modal-icon'></i>
-                    </a>
+                    <div style="display: flex; gap: 10px; justify-content: center;">
+                        <a href="https://play.google.com/store/apps/details?id=com.ShopChat.Shop_Chat" target="_blank" class="button work__modal-button" style="font-size: 12px; padding: 0.5rem;">
+                            Play Store <i class='bx bxl-play-store work__modal-icon'></i>
+                        </a>
+                        <a href="https://apps.apple.com/us/app/shop-chat-search-chat-shops/id6755455037" target="_blank" class="button work__modal-button" style="font-size: 12px; padding: 0.5rem;">
+                            App Store <i class='bx bxl-apple work__modal-icon'></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -1154,9 +1245,14 @@
                             <p class="work__modal-info">Daily duas and prayer times with Qibla direction</p>
                         </li>
                     </ul>
-                    <a href="https://play.google.com/store/apps/details?id=com.tawil.tawil" target="_blank" class="button work__modal-button">
-                        View on Play Store <i class='bx bxl-play-store work__modal-icon'></i>
-                    </a>
+                    <div style="display: flex; gap: 10px; justify-content: center;">
+                        <a href="https://play.google.com/store/apps/details?id=com.tawil.tawil" target="_blank" class="button work__modal-button" style="font-size: 12px; padding: 0.5rem;">
+                            Play Store <i class='bx bxl-play-store work__modal-icon'></i>
+                        </a>
+                        <a href="https://apps.apple.com/us/app/tawil-trulyislam/id6754604567" target="_blank" class="button work__modal-button" style="font-size: 12px; padding: 0.5rem;">
+                            App Store <i class='bx bxl-apple work__modal-icon'></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -1178,9 +1274,94 @@
                             <p class="work__modal-info">Interactive games and radio streaming</p>
                         </li>
                     </ul>
-                    <a href="#" class="button work__modal-button" style="opacity: 0.6; cursor: not-allowed;" title="Coming soon to app stores">
-                        Coming Soon <i class='bx bx-time work__modal-icon'></i>
-                    </a>
+                    <div style="display: flex; gap: 10px; justify-content: center;">
+                        <a href="https://play.google.com/store/apps/details?id=com.app.voicebuddies" target="_blank" class="button work__modal-button" style="font-size: 12px; padding: 0.5rem;">
+                            Play Store <i class='bx bxl-play-store work__modal-icon'></i>
+                        </a>
+                        <a href="https://apps.apple.com/us/app/voice-buddies/id6737117033" target="_blank" class="button work__modal-button" style="font-size: 12px; padding: 0.5rem;">
+                            App Store <i class='bx bxl-apple work__modal-icon'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for SwiftGo AI -->
+            <div class="work__modal">
+                <div class="work__modal-content">
+                    <i class='bx bx-x work__modal-close'></i>
+                    <h3 class="work__modal-title">SwiftGo AI</h3>
+                    <p class="work__modal-description">AI powered solutions to enhance your daily workflow.</p>
+                    <ul class="work__modal-list">
+                        <li class="work__modal-item"><i class='bx bx-check work__modal-icon'></i><p class="work__modal-info">Smart AI integrations</p></li>
+                    </ul>
+                    <div style="display: flex; gap: 10px; justify-content: center;">
+                        <a href="https://play.google.com/store/apps/details?id=com.swiftgo.swiftgo" target="_blank" class="button work__modal-button" style="font-size: 12px; padding: 0.5rem;">
+                            Play Store <i class='bx bxl-play-store work__modal-icon'></i>
+                        </a>
+                        <a href="https://apps.apple.com/us/app/swiftgo-ai/id6758090992" target="_blank" class="button work__modal-button" style="font-size: 12px; padding: 0.5rem;">
+                            App Store <i class='bx bxl-apple work__modal-icon'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for SwiftWire -->
+            <div class="work__modal">
+                <div class="work__modal-content">
+                    <i class='bx bx-x work__modal-close'></i>
+                    <h3 class="work__modal-title">SwiftWire</h3>
+                    <p class="work__modal-description">Fast and reliable connectivity and communication.</p>
+                    <ul class="work__modal-list">
+                        <li class="work__modal-item"><i class='bx bx-check work__modal-icon'></i><p class="work__modal-info">Real-time updates</p></li>
+                    </ul>
+                    <div style="display: flex; gap: 10px; justify-content: center;">
+                        <a href="https://play.google.com/store/apps/details?id=com.swiftWire.swiftWire" target="_blank" class="button work__modal-button" style="font-size: 12px; padding: 0.5rem;">
+                            Play Store <i class='bx bxl-play-store work__modal-icon'></i>
+                        </a>
+                        <a href="https://apps.apple.com/app/swiftwire/id6756324472" target="_blank" class="button work__modal-button" style="font-size: 12px; padding: 0.5rem;">
+                            App Store <i class='bx bxl-apple work__modal-icon'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for RiseRich -->
+            <div class="work__modal">
+                <div class="work__modal-content">
+                    <i class='bx bx-x work__modal-close'></i>
+                    <h3 class="work__modal-title">RiseRich</h3>
+                    <p class="work__modal-description">Financial tracking and growth application.</p>
+                    <ul class="work__modal-list">
+                        <li class="work__modal-item"><i class='bx bx-check work__modal-icon'></i><p class="work__modal-info">Comprehensive tracking</p></li>
+                    </ul>
+                    <div style="display: flex; gap: 10px; justify-content: center;">
+                        <a href="https://play.google.com/store/apps/details?id=com.rise_rich.app" target="_blank" class="button work__modal-button" style="font-size: 12px; padding: 0.5rem;">
+                            Play Store <i class='bx bxl-play-store work__modal-icon'></i>
+                        </a>
+                        <a href="https://apps.apple.com/us/app/rise-rich/id6754073725" target="_blank" class="button work__modal-button" style="font-size: 12px; padding: 0.5rem;">
+                            App Store <i class='bx bxl-apple work__modal-icon'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for Level Plus -->
+            <div class="work__modal">
+                <div class="work__modal-content">
+                    <i class='bx bx-x work__modal-close'></i>
+                    <h3 class="work__modal-title">Level Plus</h3>
+                    <p class="work__modal-description">A comprehensive platform for modern services.</p>
+                    <ul class="work__modal-list">
+                        <li class="work__modal-item"><i class='bx bx-check work__modal-icon'></i><p class="work__modal-info">Modern interface and seamless experience</p></li>
+                    </ul>
+                    <div style="display: flex; gap: 10px; justify-content: center;">
+                        <a href="https://play.google.com/store/apps/details?id=com.fitnessbynikki.levelplus" target="_blank" class="button work__modal-button" style="font-size: 12px; padding: 0.5rem;">
+                            Play Store <i class='bx bxl-play-store work__modal-icon'></i>
+                        </a>
+                        <a href="https://apps.apple.com/nl/app/level-app/id6759590619?l=en-GB" target="_blank" class="button work__modal-button" style="font-size: 12px; padding: 0.5rem;">
+                            App Store <i class='bx bxl-apple work__modal-icon'></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -1602,6 +1783,92 @@
             </div>
 
 
+
+            <!-- Modal for Fluzar -->
+            <div class="work__modal">
+                <div class="work__modal-content">
+                    <i class='bx bx-x work__modal-close'></i>
+                    <h3 class="work__modal-title">Fluzar</h3>
+                    <p class="work__modal-description">AI Social Post Manager.</p>
+                    <ul class="work__modal-list">
+                        <li class="work__modal-item"><i class='bx bx-check work__modal-icon'></i><p class="work__modal-info">AI-driven social management</p></li>
+                    </ul>
+                    <div style="display: flex; gap: 10px; justify-content: center;">
+                        <a href="https://apps.apple.com/nl/app/fluzar-ai-social-post-manager/id6751750289?l=en-GB" target="_blank" class="button work__modal-button" style="font-size: 12px; padding: 0.5rem;">
+                            App Store <i class='bx bxl-apple work__modal-icon'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Modal for Universal LMS -->
+            <div class="work__modal">
+                <div class="work__modal-content">
+                    <i class='bx bx-x work__modal-close'></i>
+                    <h3 class="work__modal-title">Universal LMS</h3>
+                    <p class="work__modal-description">A robust learning management system.</p>
+                    <ul class="work__modal-list">
+                        <li class="work__modal-item"><i class='bx bx-check work__modal-icon'></i><p class="work__modal-info">Student and course management</p></li>
+                    </ul>
+                    <div style="display: flex; gap: 10px; justify-content: center;">
+                        <a href="https://apps.apple.com/us/app/universal-lms/id6503935392" target="_blank" class="button work__modal-button" style="font-size: 12px; padding: 0.5rem;">
+                            App Store <i class='bx bxl-apple work__modal-icon'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for Modern Islamic School LMS -->
+            <div class="work__modal">
+                <div class="work__modal-content">
+                    <i class='bx bx-x work__modal-close'></i>
+                    <h3 class="work__modal-title">Modern Islamic School LMS</h3>
+                    <p class="work__modal-description">Custom LMS tailored for educational institutes.</p>
+                    <ul class="work__modal-list">
+                        <li class="work__modal-item"><i class='bx bx-check work__modal-icon'></i><p class="work__modal-info">Intuitive dashboards</p></li>
+                    </ul>
+                    <div style="display: flex; gap: 10px; justify-content: center;">
+                        <a href="https://play.google.com/store/apps/details?id=com.iischool.thetuitionist" target="_blank" class="button work__modal-button" style="font-size: 12px; padding: 0.5rem;">
+                            Play Store <i class='bx bxl-play-store work__modal-icon'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for Faith School System LMS -->
+            <div class="work__modal">
+                <div class="work__modal-content">
+                    <i class='bx bx-x work__modal-close'></i>
+                    <h3 class="work__modal-title">Faith School System LMS</h3>
+                    <p class="work__modal-description">Custom LMS designed to streamline education management.</p>
+                    <ul class="work__modal-list">
+                        <li class="work__modal-item"><i class='bx bx-check work__modal-icon'></i><p class="work__modal-info">School administration tools</p></li>
+                    </ul>
+                    <div style="display: flex; gap: 10px; justify-content: center;">
+                        <a href="https://play.google.com/store/apps/details?id=com.faithschoolsystem.thetuitionist" target="_blank" class="button work__modal-button" style="font-size: 12px; padding: 0.5rem;">
+                            Play Store <i class='bx bxl-play-store work__modal-icon'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for The Caps School LMS -->
+            <div class="work__modal">
+                <div class="work__modal-content">
+                    <i class='bx bx-x work__modal-close'></i>
+                    <h3 class="work__modal-title">The Caps School LMS</h3>
+                    <p class="work__modal-description">Specialized learning management platform.</p>
+                    <ul class="work__modal-list">
+                        <li class="work__modal-item"><i class='bx bx-check work__modal-icon'></i><p class="work__modal-info">Interactive learning environments</p></li>
+                    </ul>
+                    <div style="display: flex; gap: 10px; justify-content: center;">
+                        <a href="https://play.google.com/store/apps/details?id=com.capschool.thetuitionist" target="_blank" class="button work__modal-button" style="font-size: 12px; padding: 0.5rem;">
+                            Play Store <i class='bx bxl-play-store work__modal-icon'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
 
 
