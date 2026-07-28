@@ -6,23 +6,23 @@
   --header-height: 4rem;
 
   /*========== Colors ==========*/
-  /* Premium Dark Theme */
-  --first-hue: 270; /* Purple-ish */
-  --sat: 80%;
-  --lig: 65%;
-  --second-hue: 220;
+  /* Premium Emerald & Neon Cyan AI Theme */
+  --first-hue: 160; /* Emerald Green */
+  --sat: 84%;
+  --lig: 48%;
+  --second-hue: 190; /* Cyan */
   
-  --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
-  --first-color-alt: hsl(var(--first-hue), var(--sat), 75%);
+  --first-color: #10b981;
+  --first-color-alt: #34d399;
   
-  --title-color: hsl(var(--second-hue), 15%, 95%);
-  --text-color: hsl(var(--second-hue), 10%, 75%);
-  --text-color-light: hsl(var(--second-hue), 10%, 60%);
-  --body-color: hsl(222, 47%, 11%); /* Deep modern dark */
-  --container-color: hsla(222, 47%, 16%, 0.6); /* Glass base */
+  --title-color: #f3f4f6;
+  --text-color: #9ca3af;
+  --text-color-light: #6b7280;
+  --body-color: #0b0f17; /* Deep Obsidian Midnight */
+  --container-color: rgba(17, 24, 39, 0.65); /* Glass Charcoal */
   
-  --glass-bg: hsla(var(--second-hue), 32%, 16%, 0.25);
-  --glass-border: hsla(0, 0%, 100%, 0.1);
+  --glass-bg: rgba(17, 24, 39, 0.35);
+  --glass-border: rgba(255, 255, 255, 0.08);
   --glass-blur: blur(16px);
 
   /*========== Font and typography ==========*/
@@ -1444,7 +1444,7 @@ body.light-theme {
   left: 10%;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, #a855f7, #6366f1);
+  background: radial-gradient(circle, #10b981, #059669);
 }
 
 .ambient__orb-2 {
@@ -1452,7 +1452,7 @@ body.light-theme {
   right: 5%;
   width: 450px;
   height: 450px;
-  background: radial-gradient(circle, #06b6d4, #3b82f6);
+  background: radial-gradient(circle, #06b6d4, #0284c7);
 }
 
 /* Hero Status Badge */
@@ -1460,15 +1460,15 @@ body.light-theme {
   display: inline-flex;
   align-items: center;
   column-gap: 0.5rem;
-  background: rgba(168, 85, 247, 0.12);
-  border: 1px solid rgba(168, 85, 247, 0.3);
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
   padding: 0.4rem 1.25rem;
   border-radius: 50px;
   font-size: var(--small-font-size);
-  color: #c084fc;
+  color: #34d399;
   margin-bottom: 1.5rem;
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.15);
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.15);
 }
 
 .status__dot {
@@ -1507,13 +1507,13 @@ body.light-theme {
 
 .stat__card:hover {
   transform: translateY(-5px);
-  border-color: rgba(168, 85, 247, 0.4);
+  border-color: rgba(16, 185, 129, 0.4);
 }
 
 .stat__number {
   font-size: var(--h1-font-size);
   font-weight: var(--font-bold);
-  background: linear-gradient(135deg, #ffffff, #c084fc);
+  background: linear-gradient(135deg, #ffffff, #34d399);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: block;
@@ -1577,7 +1577,7 @@ body.light-theme {
   padding: 0.2rem 0.6rem;
   border-radius: 6px;
   font-size: var(--tiny-font-size);
-  color: #c084fc;
+  color: #34d399;
 }
 
 .work__actions {
@@ -1614,14 +1614,14 @@ body.light-theme {
 .fab__main-btn {
   width: 56px;
   height: 56px;
-  background: linear-gradient(135deg, #a855f7, #06b6d4);
+  background: linear-gradient(135deg, #10b981, #06b6d4);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
   font-size: 1.6rem;
-  box-shadow: 0 8px 25px rgba(168, 85, 247, 0.5);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
   cursor: pointer;
   transition: transform 0.3s ease;
   text-decoration: none;
