@@ -1415,4 +1415,220 @@ body.light-theme {
   animation: glowPulse 3s infinite;
 }
 
+/*=============== ULTRA-PREMIUM NEW STYLES ===============*/
+/* Ambient Background Glow Orbs */
+.ambient__orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.18;
+}
+
+.ambient__orb-1 {
+  top: 5%;
+  left: 10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #a855f7, #6366f1);
+}
+
+.ambient__orb-2 {
+  bottom: 20%;
+  right: 5%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, #06b6d4, #3b82f6);
+}
+
+/* Hero Status Badge */
+.hero__status-badge {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  padding: 0.4rem 1.25rem;
+  border-radius: 50px;
+  font-size: var(--small-font-size);
+  color: #c084fc;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.15);
+}
+
+.status__dot {
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #22c55e;
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+/* Hero Stats Counter Bar */
+.hero__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+  max-width: 700px;
+}
+
+.stat__card {
+  background: var(--container-color);
+  border: 1px solid var(--glass-border);
+  padding: 1.25rem 1rem;
+  border-radius: 1.25rem;
+  text-align: center;
+  backdrop-filter: var(--glass-blur);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.stat__card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(168, 85, 247, 0.4);
+}
+
+.stat__number {
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-bold);
+  background: linear-gradient(135deg, #ffffff, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+}
+
+.stat__title {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+  margin-top: 0.25rem;
+}
+
+/* Floating Tech Badges */
+.home__img-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.floating__badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  column-gap: 0.4rem;
+  background: var(--container-color);
+  border: 1px solid var(--glass-border);
+  padding: 0.5rem 0.9rem;
+  border-radius: 50px;
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  animation: floatAnim 4s ease-in-out infinite;
+  z-index: 5;
+}
+
+.floating__badge i {
+  font-size: 1.1rem;
+  color: #38bdf8;
+}
+
+.floating__badge-1 { top: 10%; left: -20px; animation-delay: 0s; }
+.floating__badge-2 { bottom: 15%; right: -20px; animation-delay: 2s; }
+.floating__badge-3 { top: 60%; left: -30px; animation-delay: 1s; }
+
+@keyframes floatAnim {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Project Tag Pills & Links */
+.work__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.75rem 0;
+}
+
+.work__tag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: var(--tiny-font-size);
+  color: #c084fc;
+}
+
+.work__actions {
+  display: flex;
+  column-gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.work__action-btn {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.3rem;
+  font-size: var(--small-font-size);
+  color: var(--first-color);
+  transition: color 0.3s ease;
+}
+
+.work__action-btn:hover {
+  color: #ffffff;
+}
+
+/* Floating Quick Action Contact Button */
+.floating__contact-fab {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 0.75rem;
+}
+
+.fab__main-btn {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #a855f7, #06b6d4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.6rem;
+  box-shadow: 0 8px 25px rgba(168, 85, 247, 0.5);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+.fab__main-btn:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+  .hero__stats {
+    grid-template-columns: 1fr;
+  }
+  .floating__badge {
+    display: none; /* Hide on small mobile to avoid overflow */
+  }
+  .floating__contact-fab {
+    bottom: 5rem; /* Raise above mobile bottom bar */
+    right: 1.25rem;
+  }
+}
+
 
