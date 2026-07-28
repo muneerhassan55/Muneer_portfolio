@@ -126,64 +126,75 @@ img {
 
 /*========== Variables light theme ==========*/
 body.light-theme {
-  --title-color: hsl(var(--second-hue), 15%, 15%);
-  --text-color: hsl(var(--second-hue), 8%, 35%);
-  --body-color: hsl(var(--second-hue), 100%, 99%);
-  --container-color: #e9e9e9;
+  --title-color: #0f172a;
+  --text-color: #475569;
+  --text-color-light: #64748b;
+  --body-color: #f8fafc; /* Clean off-white slate */
+  --container-color: #ffffff; /* Crisp white card */
+  --glass-border: rgba(15, 23, 42, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.85);
 }
 
 /*========== 
     Color changes in some parts of 
     the website, in light theme
 ==========*/
-.light-theme .scroll-header {
-  box-shadow: 0 2px 4px hsla(0, 0%, 1%, 0.1);
+.light-theme .header {
+  background-color: rgba(248, 250, 252, 0.85) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
 }
 
 .light-theme .nav__menu {
-  background-color: hsla(var(--second-hue), 32%, 90%, 0.8);
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 8px 32px rgba(15, 23, 42, 0.08);
+}
+
+.light-theme .scroll-header {
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
 }
 
 .light-theme .section__subtitle {
-  color: var(--text-color);
+  color: var(--text-color-light);
 }
 
 .light-theme .home__social-link {
-  box-shadow: 0 2px 16px hsla(var(--second-hue), 48%, 8%, 0.1);
+  background-color: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
 }
 
-.light-theme .home__social-link::after,
-.light-theme .footer__social-link {
-  background-color: var(--title-color);
+.light-theme .home__social-link:hover {
+  background-color: var(--first-color);
+  color: #ffffff;
 }
 
-.light-theme .home__social-link,
-.light-theme .home__scroll,
-.light-theme .button,
-.light-theme .button:hover,
-.light-theme .active-work,
-.light-theme .footer__title,
-.light-theme .footer__link,
-.light-theme .footer__copy {
-  color: var(--title-color);
-}
-
-.light-theme .about__box {
-  box-shadow: 0 2px 16px hsla(var(--second-hue), 48%, 8%, 0.1);
-}
-
-.light-theme .button,
+.light-theme .stat__card,
+.light-theme .about__box,
 .light-theme .skills__content,
 .light-theme .services__card,
 .light-theme .work__card,
 .light-theme .testimonial__card,
 .light-theme .contact__card,
-.light-theme .contact__form-div {
-  box-shadow: 0 2px 16px hsla(var(--second-hue), 48%, 8%, 0.1);
+.light-theme .contact__form-div,
+.light-theme .pillar__card,
+.light-theme .policy__card {
+  background-color: #ffffff !important;
+  border: 1px solid rgba(16, 185, 129, 0.2) !important;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05) !important;
+}
+
+.light-theme .stat__number {
+  background: linear-gradient(135deg, #0f172a, #059669);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .light-theme::-webkit-scrollbar {
-  background-color: hsl(var(--second-hue), 8%, 80%);
+  background-color: #e2e8f0;
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -229,8 +240,10 @@ body.light-theme {
   top: 0;
   left: 0;
   width: 100%;
-  /* height: var(--header-height); */
-  background-color: var(--body-color);
+  background-color: rgba(11, 15, 23, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   z-index: var(--z-fixed);
   transition: 0.4s;
 }
@@ -1493,6 +1506,8 @@ body.light-theme {
   gap: 1.25rem;
   margin-top: 2.5rem;
   max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .stat__card {
