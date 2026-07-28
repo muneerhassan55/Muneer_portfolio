@@ -1391,17 +1391,30 @@ body.light-theme {
   height: 20px;
   border: 2px solid var(--first-color);
   border-radius: 50%;
-  pointer-events: none;
+  pointer-events: none !important;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: transform 0.1s ease-out, width 0.2s, height 0.2s, background-color 0.2s;
+  opacity: 0; /* Hidden by default until mouse moves */
+  transition: opacity 0.3s ease, transform 0.15s ease-out, width 0.2s, height 0.2s, background-color 0.2s;
+  box-shadow: 0 0 12px hsla(var(--first-hue), var(--sat), var(--lig), 0.5);
+}
+
+.custom-cursor.active {
+  opacity: 1;
 }
 
 .custom-cursor.hover {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   background-color: hsla(var(--first-hue), var(--sat), var(--lig), 0.2);
-  border-color: transparent;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Hide custom cursor on touch/mobile devices */
+@media (hover: none), (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
+  }
 }
 
 /* Animations for hero glow */
