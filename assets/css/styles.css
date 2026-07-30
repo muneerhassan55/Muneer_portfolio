@@ -1178,13 +1178,6 @@ body.light-theme {
 
 /* For medium devices */
 @media screen and (min-width: 630px) {
-  .nav__menu {
-    width: 328px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-  }
-
   .about__info {
     grid-template-columns: repeat(3, 180px);
     justify-content: center;
@@ -1287,8 +1280,22 @@ body.light-theme {
   }
 } */
 
+@media screen and (max-width: 967px) {
+  .nav__menu {
+    position: fixed !important;
+    bottom: 1.25rem !important;
+    top: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    margin: 0 !important;
+    width: min(90%, 360px) !important;
+    z-index: 999 !important;
+  }
+}
+
 /* For large devices */
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 968px) {
   .container {
     margin-left: auto;
     margin-right: auto;
