@@ -7,6 +7,48 @@ function scrollHeader() {
 }
 window.addEventListener("scroll", scrollHeader);
 
+/*=============== MOBILE NAV DRAWER ===============*/
+const navMenu = document.getElementById("nav-menu"),
+  navToggle = document.getElementById("nav-toggle"),
+  navClose = document.getElementById("nav-close"),
+  navOverlay = document.getElementById("nav-overlay");
+
+function openNavMenu() {
+  navMenu.classList.add("show-menu");
+  navOverlay.classList.add("show-overlay");
+  document.body.classList.add("no-scroll");
+  navToggle.setAttribute("aria-expanded", "true");
+}
+
+function closeNavMenu() {
+  navMenu.classList.remove("show-menu");
+  navOverlay.classList.remove("show-overlay");
+  document.body.classList.remove("no-scroll");
+  navToggle.setAttribute("aria-expanded", "false");
+}
+
+if (navMenu && navToggle && navClose && navOverlay) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.contains("show-menu") ? closeNavMenu() : openNavMenu();
+  });
+  navClose.addEventListener("click", closeNavMenu);
+  navOverlay.addEventListener("click", closeNavMenu);
+
+  // Close the drawer after picking a section
+  document.querySelectorAll(".nav__link").forEach((link) => {
+    link.addEventListener("click", closeNavMenu);
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeNavMenu();
+  });
+
+  // Never leave the drawer state stuck when resizing up to desktop
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 968) closeNavMenu();
+  });
+}
+
 /*=============== SERVICES MODAL ===============*/
 // Get the modal
 const modalViews = document.querySelectorAll(".services__modal"),

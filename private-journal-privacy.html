@@ -280,7 +280,7 @@
         <nav class="nav container">
             <a href="/" class="nav__logo">Muneer Hasan</a>
 
-            <div class="nav__menu">
+            <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="/" class="nav__link"><i class='bx bx-home'></i> <span class="nav__name">Home</span></a></li>
                     <li class="nav__item"><a href="/#about" class="nav__link"><i class='bx bx-user'></i> <span class="nav__name">About</span></a></li>
@@ -288,11 +288,27 @@
                     <li class="nav__item"><a href="/#work" class="nav__link"><i class='bx bx-briefcase-alt-2'></i> <span class="nav__name">Work</span></a></li>
                     <li class="nav__item"><a href="/#contact" class="nav__link"><i class='bx bx-message-square-dots'></i> <span class="nav__name">Contact</span></a></li>
                 </ul>
+
+                <!--=============== close drawer (mobile) ===============-->
+                <button class="nav__close" id="nav-close" type="button" aria-label="Close menu">
+                    <i class='bx bx-x'></i>
+                </button>
             </div>
 
-            <!--=============== theme change button ===============-->
-            <i class='bx bx-moon change-theme change-theme-button' id="theme-button"></i>
+            <div class="nav__btns">
+                <!--=============== theme change button ===============-->
+                <i class='bx bx-moon change-theme change-theme-button' id="theme-button"></i>
+
+                <!--=============== drawer toggle (mobile) ===============-->
+                <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Open menu"
+                    aria-controls="nav-menu" aria-expanded="false">
+                    <i class='bx bx-menu'></i>
+                </button>
+            </div>
         </nav>
+
+        <!--=============== drawer overlay (mobile) ===============-->
+        <div class="nav__overlay" id="nav-overlay"></div>
     </header>
 
     <!--=============== MAIN ===============-->

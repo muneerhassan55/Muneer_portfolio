@@ -147,9 +147,17 @@ body.light-theme {
 }
 
 .light-theme .nav__menu {
-  background-color: rgba(255, 255, 255, 0.95);
-  border: 1px solid rgba(15, 23, 42, 0.1);
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+  background-color: rgba(255, 255, 255, 0.97);
+  border-left: 1px solid rgba(15, 23, 42, 0.1);
+  box-shadow: -20px 0 45px rgba(15, 23, 42, 0.12);
+}
+
+.light-theme .nav__link:hover {
+  background-color: rgba(15, 23, 42, 0.05);
+}
+
+.light-theme .nav__overlay {
+  background-color: rgba(15, 23, 42, 0.35);
 }
 
 .light-theme .scroll-header {
@@ -265,44 +273,117 @@ body.light-theme {
   color: var(--first-color-alt);
 }
 
+/* Right side actions: theme toggle + hamburger */
+.nav__btns {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.nav__toggle,
+.nav__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--title-color);
+  font-size: 1.6rem;
+  line-height: 1;
+  transition: color 0.3s;
+}
+
+.nav__toggle:hover,
+.nav__close:hover {
+  color: var(--first-color);
+}
+
+/* Mobile drawer (slides in from the right) */
 .nav__menu {
   position: fixed;
-  bottom: 1.25rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(90%, 360px);
-  background-color: rgba(17, 24, 39, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 5rem;
-  padding: 0.6rem 1.25rem;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  transition: 0.4s;
+  top: 0;
+  right: -100%;
+  width: 78%;
+  max-width: 320px;
+  height: 100vh;
+  height: 100dvh;
+  background-color: rgba(11, 15, 23, 0.96);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 5.5rem 1.5rem 2.5rem;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: -20px 0 45px rgba(0, 0, 0, 0.45);
+  overflow-y: auto;
+  visibility: hidden; /* keep off-screen links out of the tab order */
+  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s;
+  z-index: 1000;
+}
+
+.nav__menu.show-menu {
+  right: 0;
+  visibility: visible;
+}
+
+.nav__close {
+  position: absolute;
+  top: 1.4rem;
+  right: 1.4rem;
+  font-size: 1.9rem;
+  color: var(--first-color);
+}
+
+/* Dim backdrop behind the drawer */
+.nav__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background-color: rgba(2, 6, 12, 0.6);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0.4s;
   z-index: 999;
+}
+
+.nav__overlay.show-overlay {
+  opacity: 1;
+  visibility: visible;
 }
 
 .nav__list {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
+  row-gap: 0.35rem;
 }
 
 .nav__link {
   color: var(--text-color);
-  font-size: 1.25rem;
-  padding: 0.4rem;
+  font-size: 1.35rem;
+  padding: 0.85rem 1rem;
   font-weight: var(--font-medium);
   text-decoration: none;
   transition: 0.4s;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  border-radius: 5rem;
+  gap: 0.9rem;
+  border-radius: 0.75rem;
+}
+
+.nav__link:hover {
+  color: var(--title-color);
+  background-color: rgba(255, 255, 255, 0.06);
 }
 
 .nav__name {
-  display: none;
+  display: block;
+  font-size: var(--normal-font-size);
 }
 
 /* Active link */
@@ -311,7 +392,7 @@ body.light-theme {
       hsla(var(--first-hue), var(--sat), var(--lig), 0.5),
       hsla(var(--first-hue), var(--sat), var(--lig), 0.2));
   box-shadow: 0 0 16px hsla(var(--first-hue), var(--sat), var(--lig), 0.4);
-  border-radius: 5rem;
+  border-radius: 0.75rem;
 
   color: var(--title-color);
 }
@@ -325,12 +406,12 @@ body.light-theme {
 .home__container {
   position: relative;
   row-gap: 4.5rem;
-  padding-top: 2rem;
+  padding-top: 0;
 }
 
 .home__data {
   text-align: center;
-  padding: 8rem 0 6rem;
+  padding: 3.5rem 0 3rem;
 }
 
 .home__greeting,
@@ -1119,7 +1200,8 @@ body.light-theme {
 /* For small devices */
 @media screen and (max-width: 320px) {
   .nav__menu {
-    padding: 1rem 1.5rem;
+    width: 85%;
+    padding: 5rem 1.15rem 2rem;
   }
 
   .home__button {
@@ -1281,16 +1363,9 @@ body.light-theme {
 } */
 
 @media screen and (max-width: 967px) {
-  .nav__menu {
-    position: fixed !important;
-    bottom: 1.25rem !important;
-    top: auto !important;
-    left: 50% !important;
-    right: auto !important;
-    transform: translateX(-50%) !important;
-    margin: 0 !important;
-    width: min(90%, 360px) !important;
-    z-index: 999 !important;
+  /* Lock page scroll while the drawer is open */
+  body.no-scroll {
+    overflow: hidden;
   }
 }
 
@@ -1309,6 +1384,10 @@ body.light-theme {
     margin-bottom: 3.5rem;
   }
 
+  .home__data {
+    padding: 5rem 0 4rem;
+  }
+
   .nav {
     height: calc(var(--header-height) + 1rem);
     display: flex;
@@ -1317,11 +1396,14 @@ body.light-theme {
   }
 
   .nav__menu {
-    position: relative !important;
-    bottom: initial !important;
-    left: initial !important;
+    position: static !important;
+    inset: auto !important;
     transform: none !important;
     width: auto !important;
+    max-width: none !important;
+    height: auto !important;
+    overflow: visible !important;
+    visibility: visible !important;
     background: transparent !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
@@ -1336,9 +1418,22 @@ body.light-theme {
     box-shadow: none !important;
   }
 
+  /* Drawer-only controls stay hidden on desktop */
+  .nav__toggle,
+  .nav__close,
+  .nav__overlay {
+    display: none !important;
+  }
+
   .nav__list {
     display: flex;
+    flex-direction: row;
     column-gap: 2.5rem;
+    row-gap: 0;
+  }
+
+  .nav__link:hover {
+    background-color: transparent;
   }
 
   .nav__link {
@@ -1742,7 +1837,7 @@ body.light-theme {
     display: none; /* Hide on small mobile to avoid overflow */
   }
   .floating__contact-fab {
-    bottom: 5rem; /* Raise above mobile bottom bar */
+    bottom: 1.5rem;
     right: 1.25rem;
   }
 }
