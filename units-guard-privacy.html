@@ -26,7 +26,8 @@
 <p class="ur">خلاصہ: یونٹس گارڈ آپ کا کوئی ذاتی ڈیٹا جمع نہیں کرتا۔ آپ کی تمام ریڈنگز صرف آپ کے فون میں محفوظ رہتی ہیں اور کسی سرور پر نہیں بھیجی جاتیں۔</p>
 
 <h2>1. Information we collect</h2>
-<p>We do <strong>not</strong> collect, store on any server, sell or share any personal information. The app has no account, no login, no analytics, no advertising and no crash-reporting services.</p>
+<p>We do <strong>not</strong> collect, store on our own servers, sell or share any personal information. The app has no account, no login, no advertising and no analytics or crash-reporting service of our own.</p>
+<p><strong>Google ML Kit diagnostics:</strong> the meter-scanning feature uses Google ML Kit. When you use scanning, ML Kit may send Google limited technical information for diagnostics and usage analytics: device model and Android version, app package name and version, a per-installation identifier (not meant to identify you or your device), performance and error information, and settings used for the scan. It does <strong>not</strong> include your photos, meter readings or the text read from them. This data is encrypted in transit and Google does not share it with third parties. See <a href="https://developers.google.com/ml-kit/android-data-disclosure">Google’s ML Kit data disclosure</a>. If you never use scanning and type readings yourself, this does not happen.</p>
 
 <h2>2. Data stored on your device</h2>
 <ul>
@@ -37,7 +38,7 @@
 
 <h2>3. Permissions the app uses</h2>
 <ul>
-  <li><strong>Camera (optional):</strong> used only when you tap “Scan meter” to read the number on your electricity meter. The image is processed on your phone using Google ML Kit on-device text recognition. Photos are not uploaded anywhere. A cropped image of the meter display is kept in the app’s private storage alongside that reading and is deleted when you delete the reading or uninstall the app. You can always type the reading instead and never grant camera access.</li>
+  <li><strong>Camera (optional):</strong> used only when you tap “Scan meter” to read the number on your electricity meter. The image is processed on your phone using Google ML Kit on-device text recognition. Photos are not uploaded anywhere (see section 1 for the technical diagnostics ML Kit sends). A cropped image of the meter display is kept in the app’s private storage alongside that reading and is deleted when you delete the reading or uninstall the app. You can always type the reading instead and never grant camera access.</li>
   <li><strong>Notifications (optional):</strong> used to remind you to take a meter reading and to warn you when your usage is close to 200 units. These notifications are created on your phone; nothing is sent to or from a server. You can turn reminders off in the app’s Settings or deny the permission.</li>
 </ul>
 
@@ -45,10 +46,10 @@
 <p>In Settings you can create a backup file of your readings and share it using any app you choose (for example WhatsApp, Gmail or Google Drive), and later restore it. This only happens when you do it yourself. Once you share the file, it is handled by the app or service you chose, under their privacy policy.</p>
 
 <h2>5. Internet use</h2>
-<p>The app works fully offline and does not send your data over the internet. The only time it opens an internet page is if you tap the link to the official NEPRA website, which opens in your web browser.</p>
+<p>The app works offline and does not send your readings or other personal data over the internet. Apart from the ML Kit diagnostics described in section 1, the only time it uses the internet is when you tap the link to the official NEPRA website, which opens in your web browser.</p>
 
 <h2>6. Children</h2>
-<p>The app is a general household utility and is not directed at children under 13. It does not knowingly collect any information from anyone, including children.</p>
+<p>The app is a general household utility and is not directed at children under 13. It does not knowingly collect personal information from anyone, including children.</p>
 
 <h2>7. Not affiliated with any government or electricity company</h2>
 <p>Units Guard is an independent app. It is <strong>not</strong> affiliated with, endorsed by, or connected to the Government of Pakistan, NEPRA, WAPDA, or any electricity distribution company (LESCO, IESCO, FESCO, GEPCO, MEPCO, PESCO, HESCO, SEPCO, QESCO, TESCO, K-Electric). All unit forecasts and bill amounts are estimates for guidance only; your official bill is final.</p>
